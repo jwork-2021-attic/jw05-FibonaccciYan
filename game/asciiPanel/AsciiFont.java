@@ -1,4 +1,4 @@
-package asciiPanel;
+package game.asciiPanel;
 
 /**
  * This class holds provides all available Fonts for the AsciiPanel. Some

@@ -1,4 +1,4 @@
-package com.anish.world;
+package game.com.anish.world;
 
 public class Tile<T extends Thing> {
 

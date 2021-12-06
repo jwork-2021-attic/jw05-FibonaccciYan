@@ -1,7 +1,7 @@
-package com.anish.world;
+package game.com.anish.world;
 
 import java.awt.Color;
-import asciiPanel.AsciiPanel;
+import game.asciiPanel.AsciiPanel;
 
 public class Creature extends Thing {
 

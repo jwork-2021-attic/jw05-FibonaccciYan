@@ -1,14 +1,15 @@
+package game;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 import javax.swing.JFrame;
 
-import com.anish.world.World;
-import com.anish.screen.Screen;
-import com.anish.screen.WorldScreen;
+import game.com.anish.world.World;
+import game.com.anish.screen.Screen;
+import game.com.anish.screen.WorldScreen;
 
-import asciiPanel.AsciiFont;
-import asciiPanel.AsciiPanel;
+import game.asciiPanel.AsciiFont;
+import game.asciiPanel.AsciiPanel;
 
 public class Main extends JFrame implements KeyListener {
 

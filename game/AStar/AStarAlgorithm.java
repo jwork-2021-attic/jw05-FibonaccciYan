@@ -1,4 +1,4 @@
-package AStar;
+package game.AStar;
 
 import java.util.ArrayList;
 import java.util.List;

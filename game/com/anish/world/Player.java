@@ -1,8 +1,8 @@
-package com.anish.world;
+package game.com.anish.world;
 
 import java.awt.Color;
 
-public class Player extends Creature{
+public class Player extends Creature implements Runnable{
 
     private int xPos;
     private int yPos;
@@ -27,5 +27,11 @@ public class Player extends Creature{
 
     public void setyPos(int yPos){
         this.yPos = yPos;
+    }
+
+    @Override
+    public void run() {
+        // TODO Auto-generated method stub
+        
     }
 }

@@ -1,4 +1,4 @@
-package maze;
+package game.maze;
 
 public class Node {
     public final int x;

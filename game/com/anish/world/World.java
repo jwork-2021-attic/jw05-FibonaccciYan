@@ -1,9 +1,9 @@
-package com.anish.world;
+package game.com.anish.world;
 
 public class World {
 
-    public static final int WIDTH = 40;
-    public static final int HEIGHT = 40;
+    public static final int WIDTH = 20;
+    public static final int HEIGHT = 20;
 
     private Tile<Thing>[][] tiles;
 

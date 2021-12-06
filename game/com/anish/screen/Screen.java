@@ -1,8 +1,8 @@
-package com.anish.screen;
+package game.com.anish.screen;
 
 import java.awt.event.KeyEvent;
 
-import asciiPanel.AsciiPanel;
+import game.asciiPanel.AsciiPanel;
 
 public interface Screen {
 
