@@ -3,9 +3,10 @@ package game.com.anish.screen;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;  
+import java.util.concurrent.Executors;
 
-import game.com.anish.world.Thing;
+import game.com.anish.world.Bomb;
+// import game.com.anish.world.Thing;
 import game.com.anish.world.Player;
 import game.com.anish.world.World;
 import game.com.anish.world.Wall;
@@ -28,8 +29,8 @@ public class WorldScreen implements Screen {
     String[] visualSteps;
 
     public WorldScreen() {
-        world = new World();
-        initMaze();
+        initWorld();
+
         player1 = new Player(new Color(255, 255, 0), world, 0, 0);
         player2 = new Player(new Color(0, 255, 0), world, SIZE - 1, SIZE - 1);
         world.put(player1, 0, 0);
@@ -40,7 +41,8 @@ public class WorldScreen implements Screen {
 
     } 
 
-    private void initMaze() {
+    private void initWorld() {
+        world = new World();
         MazeGenerator mazeGenerator = new MazeGenerator(SIZE);
         mazeGenerator.generateMaze();
         maze = mazeGenerator.getMaze();
@@ -109,6 +111,9 @@ public class WorldScreen implements Screen {
                 break;
             case KeyEvent.VK_ENTER:// enter
                 // TODO:
+                Bomb bomb = new Bomb(world, xPos1, yPos1);
+                world.put(bomb, xPos1, yPos1);
+                new Thread(bomb).start();
                 break;
             // player2 control
             case KeyEvent.VK_A:// A
