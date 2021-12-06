@@ -6,10 +6,20 @@ public class Render implements Runnable {
 
     private Main mainActivity;
 
+    public Render(Main mainActivity) {
+        this.mainActivity = mainActivity;
+    }
+
     @Override
     public void run() {
-        // TODO Auto-generated method stub
-        
+        while(true) {
+            try{
+                Thread.sleep(30);
+                mainActivity.repaint();
+            } catch (InterruptedException e){
+                System.out.println(e);
+            }
+        }
     }
     
 }

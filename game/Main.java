@@ -1,10 +1,12 @@
 package game;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 import javax.swing.JFrame;
 
 import game.com.anish.world.World;
+import game.com.anish.screen.Render;
 import game.com.anish.screen.Screen;
 import game.com.anish.screen.WorldScreen;
 
@@ -24,7 +26,7 @@ public class Main extends JFrame implements KeyListener {
         screen = new WorldScreen();
         addKeyListener(this);
         repaint();
-
+        new Thread(new Render(this)).start();
     }
 
     @Override
