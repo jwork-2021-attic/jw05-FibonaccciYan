@@ -17,7 +17,7 @@ public class Render implements Runnable {
                 Thread.sleep(30);
                 mainActivity.repaint();
             } catch (InterruptedException e){
-                System.out.println(e);
+                e.printStackTrace();
             }
         }
     }

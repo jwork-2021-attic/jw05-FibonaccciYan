@@ -6,11 +6,17 @@ public class Player extends Creature implements Runnable{
 
     private int xPos;
     private int yPos;
+    private boolean alive;
 
     public Player(Color color, World world, int xPos, int yPos) {
         super(color, (char) 2, world);
         this.xPos = xPos;
         this.yPos = yPos;
+        this.alive = true;
+    }
+
+    public boolean getStatus() {
+        return alive;
     }
 
     public int getxPos(){
@@ -19,6 +25,10 @@ public class Player extends Creature implements Runnable{
 
     public int getyPos(){
         return yPos;
+    }
+
+    public void setStatus(boolean status) {
+        this.alive = status;
     }
 
     public void setxPos(int xPos){
@@ -31,7 +41,14 @@ public class Player extends Creature implements Runnable{
 
     @Override
     public void run() {
-        // TODO Auto-generated method stub
-        
+        while(true) {  
+            // Don't delete!
+            System.out.print("");
+            if(!alive) {
+                world.remove(xPos, yPos);
+                world.win();
+                return;
+            }
+        }
     }
 }
