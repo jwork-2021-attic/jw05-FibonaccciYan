@@ -2,9 +2,6 @@ package game.com.anish.world;
 
 import java.awt.Color;
 import java.util.List;
-
-import javax.management.openmbean.OpenType;
-
 import java.util.Iterator;
 
 public class Creature extends Thing {
